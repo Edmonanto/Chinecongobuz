@@ -1,0 +1,11 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+
+# Cache images (trop lourdes pour git)
+img_cache/
+img_branded/
+
+# NE PAS ignorer auth_info_baileys — Railway en a besoin pour démarrer
+# Mais si tu veux re-scanner le QR, supprime ce dossier sur Railway via Volume
