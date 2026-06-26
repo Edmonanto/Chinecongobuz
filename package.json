@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Automated WhatsApp Channel — Congo Culture Quotidien (4x/jour)",
   "main": "whatsapp_bot.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "start": "node whatsapp_bot.js",
+    "start": "node 1688_publisher_bot.js",
     "setup": "node setup_channel.js",
     "publish1688": "node 1688_publisher_bot.js"
   },
