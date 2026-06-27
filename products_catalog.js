@@ -21,8 +21,9 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i4/2206686532409/O1CN01Zq1Ixy1WQU9x1Bpph_!!2206686532409.jpg",
-      "https://img.alicdn.com/imgextra/i1/2206686532409/O1CN01Mx9Djz1WQU9tQGKmD_!!2206686532409.jpg",
+      "https://ae01.alicdn.com/kf/S8a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8.jpg_640x640.jpg",
+      "https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
     ],
     localImages: [],
   },
@@ -43,13 +44,13 @@ const PRODUCTS = [
     moq: "1 pièce ou plus",
     unit: "pièce",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i3/TB1_dXJXBr0gK0jSZFnXXbRRXXa/SL1000_.jpg",
-      "https://img.alicdn.com/imgextra/i2/TB1w0pHXoY1gK0jSZFMXXaWcVXa/SL1000_.jpg",
+      "https://images.unsplash.com/photo-1590735213920-68192a487bc2?w=800&q=80",
+      "https://images.unsplash.com/photo-1594938298603-c8148f4cae85?w=800&q=80",
     ],
     localImages: [],
   },
 
-  // ── 3. COUVERTURES / DRAP DE LIT ─────────────────────────────────────────
+  // ── 3. COUVERTURES ────────────────────────────────────────────────────────
   {
     id: 3,
     emoji: "🛏️",
@@ -64,7 +65,8 @@ const PRODUCTS = [
     moq: "2 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i2/2200752813452/O1CN01rYmNKF1MhANfbNWMm_!!2200752813452.jpg",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
     ],
     localImages: [],
   },
@@ -88,7 +90,8 @@ const PRODUCTS = [
     moq: "1 paire ou plus",
     unit: "paire",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i1/2214218890171/O1CN01vPKFm51jY5DPcFXOH_!!2214218890171.jpg",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80",
     ],
     localImages: [],
   },
@@ -111,7 +114,8 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i3/2213461934734/O1CN01Xf2AoD1Y1Bq2lbv2f_!!2213461934734.jpg",
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",
+      "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=80",
     ],
     localImages: [],
   },
@@ -134,7 +138,8 @@ const PRODUCTS = [
     moq: "2 ensembles ou plus",
     unit: "ensemble",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i4/2213004751965/O1CN01JZmNtR1mCB2e24tC2_!!2213004751965.jpg",
+      "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800&q=80",
+      "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=800&q=80",
     ],
     localImages: [],
   },
@@ -153,7 +158,8 @@ const PRODUCTS = [
     moq: "1 set ou plus",
     unit: "set",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i1/2200734175450/O1CN01xfPv1r1RsPYhc4f3r_!!2200734175450.jpg",
+      "https://images.unsplash.com/photo-1584990347449-a2d4c2c044c9?w=800&q=80",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
     ],
     localImages: [],
   },
@@ -173,12 +179,13 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i1/2213569493284/O1CN01WqeUaY1Kj2OC7pMDd_!!2213569493284.jpg",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80",
+      "https://images.unsplash.com/photo-1594938298603-c8148f4cae85?w=800&q=80",
     ],
     localImages: [],
   },
 
-  // ── 9. TÉLÉPHONE ACCESSOIRES ──────────────────────────────────────────────
+  // ── 9. ÉCOUTEURS BLUETOOTH ────────────────────────────────────────────────
   {
     id: 9,
     emoji: "📱",
@@ -194,7 +201,8 @@ const PRODUCTS = [
     moq: "1 paire ou plus",
     unit: "paire",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i3/2206776369444/O1CN01PJiDwN1kDFJbSnFpI_!!2206776369444.jpg",
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&q=80",
+      "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80",
     ],
     localImages: [],
   },
@@ -203,7 +211,7 @@ const PRODUCTS = [
   {
     id: 10,
     emoji: "🌀",
-    name: "Ventilateur de Table Rechargeable USB",
+    name: "Ventilateur Rechargeable USB",
     category: "Électroménager",
     description: "Ventilateur portable rechargeable, 3 vitesses, batterie 4000mAh, silencieux, idéal pour coupures de courant",
     sizes: [
@@ -214,7 +222,8 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i3/2213527491474/O1CN01hkKrSI1T9zz0YmF8k_!!2213527491474.jpg",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=800&q=80",
     ],
     localImages: [],
   },
@@ -234,18 +243,19 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i4/2200808819710/O1CN01yOkBrn1QCPuoI39VJ_!!2200808819710.jpg",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80",
+      "https://images.unsplash.com/photo-1542496658-e33a6d0d45f6?w=800&q=80",
     ],
     localImages: [],
   },
 
-  // ── 12. PANNEAUX SOLAIRES MINI ────────────────────────────────────────────
+  // ── 12. KIT SOLAIRE ───────────────────────────────────────────────────────
   {
     id: 12,
     emoji: "☀️",
-    name: "Kit Panneau Solaire Portable (Lampes LED)",
+    name: "Kit Panneau Solaire Portable",
     category: "Énergie Solaire",
-    description: "Kit solaire complet avec panneau 10W + 3 ampoules LED + chargeur USB, parfait pour zones sans électricité",
+    description: "Kit solaire complet avec panneau + lampes LED + chargeur USB, parfait pour zones sans électricité",
     sizes: [
       { label: "Kit Basique (10W + 3 lampes + USB)", basePrice: 23.08 },
       { label: "Kit Intermédiaire (20W + 4 lampes + 2 USB)", basePrice: 38.46 },
@@ -254,7 +264,8 @@ const PRODUCTS = [
     moq: "1 kit ou plus",
     unit: "kit",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i2/2213527491474/O1CN01g4TyUV1T9zz1wBeFR_!!2213527491474.jpg",
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+      "https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&q=80",
     ],
     localImages: [],
   },
@@ -277,7 +288,8 @@ const PRODUCTS = [
     moq: "1 paire ou plus",
     unit: "paire",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i4/2213730518571/O1CN01fJA1MU1dS2hAhWPCM_!!2213730518571.jpg",
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80",
+      "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=800&q=80",
     ],
     localImages: [],
   },
@@ -299,12 +311,13 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i1/2206234826584/O1CN01tEfbqB1BrUcAI2JoQ_!!2206234826584.jpg",
+      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
+      "https://images.unsplash.com/photo-1592789705501-f9ae4278a9c9?w=800&q=80",
     ],
     localImages: [],
   },
 
-  // ── 15. GENERATEUR / BATTERIE EXTERNE ────────────────────────────────────
+  // ── 15. POWER BANK ────────────────────────────────────────────────────────
   {
     id: 15,
     emoji: "🔋",
@@ -319,7 +332,8 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i3/2213002568091/O1CN01sYqP7V1mH2EJxHLJX_!!2213002568091.jpg",
+      "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800&q=80",
+      "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=800&q=80",
     ],
     localImages: [],
   },
@@ -341,7 +355,8 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i4/2214049490988/O1CN01wFkCKZ1TdFq0e9Wyx_!!2214049490988.jpg",
+      "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=800&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
     ],
     localImages: [],
   },
@@ -360,18 +375,19 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i4/2200734175450/O1CN01xfPv1r1RsPYhc4f3r_!!2200734175450.jpg",
+      "https://images.unsplash.com/photo-1558171813-2f1deb0e1836?w=800&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
     ],
     localImages: [],
   },
 
-  // ── 18. SAVON / COSMÉTIQUES ───────────────────────────────────────────────
+  // ── 18. SAVON ÉCLAIRCISSANT ───────────────────────────────────────────────
   {
     id: 18,
     emoji: "🧴",
     name: "Savon Éclaircissant Papaye (Lot de 12)",
     category: "Beauté & Soins",
-    description: "Savon naturel à la papaye, éclaircit et unifie le teint, sans mercure, fabriqué en Chine pour export Afrique",
+    description: "Savon naturel à la papaye, éclaircit et unifie le teint, sans mercure",
     sizes: [
       { label: "Lot de 12 savons (200g/savon)", basePrice: 23.08 },
       { label: "Lot de 24 savons (200g/savon)", basePrice: 42.31 },
@@ -380,7 +396,8 @@ const PRODUCTS = [
     moq: "12 pcs (1 carton) ou plus",
     unit: "lot",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i1/2213569493284/O1CN01WqeUaY1Kj2OC7pMDd_!!2213569493284.jpg",
+      "https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=800&q=80",
+      "https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=800&q=80",
     ],
     localImages: [],
   },
@@ -389,7 +406,7 @@ const PRODUCTS = [
   {
     id: 19,
     emoji: "🧸",
-    name: "Voiture Télécommandée RC (4x4 Tout-Terrain)",
+    name: "Voiture Télécommandée RC (4x4)",
     category: "Jouets & Loisirs",
     description: "Voiture télécommandée 1:16, 4WD tout-terrain, vitesse max 25 km/h, autonomie 30 min",
     sizes: [
@@ -401,7 +418,8 @@ const PRODUCTS = [
     moq: "1 pcs ou plus",
     unit: "pcs",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i3/TB1_dXJXBr0gK0jSZFnXXbRRXXa/SL1000_.jpg",
+      "https://images.unsplash.com/photo-1594787318286-3d835c1d207f?w=800&q=80",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     ],
     localImages: [],
   },
@@ -423,7 +441,8 @@ const PRODUCTS = [
     moq: "2 panneaux ou plus",
     unit: "panneau",
     imageUrls: [
-      "https://img.alicdn.com/imgextra/i2/2200752813452/O1CN01rYmNKF1MhANfbNWMm_!!2200752813452.jpg",
+      "https://images.unsplash.com/photo-1558618047-f4e60cef50b6?w=800&q=80",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&q=80",
     ],
     localImages: [],
   },
