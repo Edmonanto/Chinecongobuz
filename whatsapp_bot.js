@@ -12,37 +12,64 @@ const { Boom } = require('@hapi/boom');
 // ─── ⚙️  CONFIG ──────────────────────────────────────────────────────────────
 const CHANNEL_JID = '120363410751257422@newsletter';
 
-const HORAIRES = {
-  matin : '0 7  * * *',   // 07:00
-  midi  : '0 12 * * *',   // 12:00
-  soir  : '0 18 * * *',   // 18:00
-  nuit  : '0 21 * * *',   // 21:00
-};
+const HORAIRES = '0 * * * *'; // Chaque heure
 // ─────────────────────────────────────────────────────────────────────────────
 
 let sock = null;
 let channelJid = null;
-let dayIndex = 0;
+let postIndex = 0;
 
-function getContent(slot) {
-  return DAILY_CONTENT[dayIndex % DAILY_CONTENT.length][slot];
-}
+// Aplatir tout le contenu en une liste unique
+const ALL_POSTS = DAILY_CONTENT.flatMap(day => [day.matin, day.midi, day.soir, day.nuit]);
 
-async function sendToChannel(slot) {
+// Images Congo — une par post (tourne en boucle)
+const IMAGES = [
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/1280px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Kinshasa_Skyline.jpg/1280px-Kinshasa_Skyline.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/24701-nature-natural-beauty-natural-beauty.jpg/1280px-24701-nature-natural-beauty-natural-beauty.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Congo_River.jpg/1280px-Congo_River.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/1280px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png',
+  'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800',
+  'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800',
+  'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800',
+  'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800',
+  'https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?w=800',
+  'https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800',
+  'https://images.unsplash.com/photo-1552083375-1447ce886485?w=800',
+  'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800',
+  'https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?w=800',
+  'https://images.unsplash.com/photo-1504470695779-75300268aa0e?w=800',
+  'https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800',
+  'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800',
+  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
+  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800',
+  'https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=800',
+  'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800',
+  'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=800',
+  'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800',
+  'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800',
+  'https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=800',
+  'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800',
+  'https://images.unsplash.com/photo-1511376777868-611b54f68947?w=800',
+  'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800',
+];
+
+async function sendToChannel() {
   if (!sock || !channelJid) {
-    console.error(`[${ts()}] ❌ Bot non connecté ou canal non trouvé.`);
+    console.error(`[${ts()}] ❌ Bot non connecté.`);
     return;
   }
-  const label = { matin: '🌅 Matin', midi: '☀️ Midi', soir: '🌆 Soir', nuit: '🌙 Nuit' }[slot];
+  const text = ALL_POSTS[postIndex % ALL_POSTS.length];
+  const imageUrl = IMAGES[postIndex % IMAGES.length];
   try {
-    await sock.sendMessage(channelJid, { text: getContent(slot) });
-    console.log(`[${ts()}] ✅ ${label} envoyé (Jour ${dayIndex % 7 + 1})`);
-    if (slot === 'nuit') {
-      dayIndex++;
-      console.log(`[${ts()}] 📅 Passage au Jour ${dayIndex % 7 + 1} demain`);
-    }
+    await sock.sendMessage(channelJid, {
+      image: { url: imageUrl },
+      caption: text
+    });
+    console.log(`[${ts()}] ✅ Post ${postIndex + 1}/${ALL_POSTS.length} envoyé (avec image)`);
+    postIndex++;
   } catch (err) {
-    console.error(`[${ts()}] ❌ Erreur (${label}) :`, err.message);
+    console.error(`[${ts()}] ❌ Erreur :`, err.message);
   }
 }
 
@@ -102,13 +129,10 @@ function startScheduler() {
   console.log('   12:00 → ☀️  Post Midi');
   console.log('   18:00 → 🌆 Post Soir');
   console.log('   21:00 → 🌙 Post Nuit');
-  console.log('\n⏰ Scheduler actif. Bot en attente...');
+  console.log('\n⏰ Post toutes les heures. Bot en attente...');
   console.log('   (Ctrl+C pour arrêter)\n');
 
-  schedule.scheduleJob(HORAIRES.matin, () => sendToChannel('matin'));
-  schedule.scheduleJob(HORAIRES.midi,  () => sendToChannel('midi'));
-  schedule.scheduleJob(HORAIRES.soir,  () => sendToChannel('soir'));
-  schedule.scheduleJob(HORAIRES.nuit,  () => sendToChannel('nuit'));
+  schedule.scheduleJob(HORAIRES, () => sendToChannel());
 }
 
 // ── Démarrage ────────────────────────────────────────────────────────────────
